@@ -3,9 +3,9 @@
   <title><![CDATA[黎浔的个人博客]]></title>
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
+  <link href="http://lionrock.github.io/"/>
   <updated>2015-11-28T09:32:03.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://lionrock.github.io/</id>
   
   <author>
     <name><![CDATA[Xun Li]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[谈谈程序员面试那点事]]></title>
-    <link href="http://yoursite.com/2015/11/27/how-to-interview/"/>
-    <id>http://yoursite.com/2015/11/27/how-to-interview/</id>
+    <link href="http://lionrock.github.io/2015/11/27/how-to-interview/"/>
+    <id>http://lionrock.github.io/2015/11/27/how-to-interview/</id>
     <published>2015-11-27T15:10:17.000Z</published>
     <updated>2015-11-28T09:32:03.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -65,14 +65,14 @@
 <p>之前看到过一篇介绍HR和程序员在面试程序员时的区别的文章（ <a href="http://coolshell.cn/articles/1695.html" target="_blank" rel="external">别的程序员是怎么读你的简历的]]>
     </summary>
     
-      <category term="随想" scheme="http://yoursite.com/tags/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随想" scheme="http://lionrock.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[我的博客搬家啦]]></title>
-    <link href="http://yoursite.com/2015/11/26/blog-space-moved/"/>
-    <id>http://yoursite.com/2015/11/26/blog-space-moved/</id>
+    <link href="http://lionrock.github.io/2015/11/26/blog-space-moved/"/>
+    <id>http://lionrock.github.io/2015/11/26/blog-space-moved/</id>
     <published>2015-11-26T15:54:34.000Z</published>
     <updated>2015-11-27T16:54:15.000Z</updated>
     <content type="html"><![CDATA[<p>今年国庆节的时候就计划着准备自己重新写一套博客，但是一直拖到今天才开始真正去做，哎～不说了，好歹今天总算是搬进新家了OhYeah(＞人＜;)</p>
@@ -93,7 +93,7 @@
 <h2 id="谈谈之前的博客系统">谈谈之前的博客系统</h2><p>由于我大二开始主力语言转移到了python，当时就拿]]>
     </summary>
     
-      <category term="随想" scheme="http://yoursite.com/tags/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随想" scheme="http://lionrock.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
