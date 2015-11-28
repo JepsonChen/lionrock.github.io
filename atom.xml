@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-11-28T09:26:46.000Z</updated>
+  <updated>2015-11-28T09:32:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/11/27/how-to-interview/"/>
     <id>http://yoursite.com/2015/11/27/how-to-interview/</id>
     <published>2015-11-27T15:10:17.000Z</published>
-    <updated>2015-11-28T09:26:46.000Z</updated>
+    <updated>2015-11-28T09:32:03.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>之前看到过一篇介绍HR和程序员在面试程序员时的区别的文章（ <a href="http://coolshell.cn/articles/1695.html" target="_blank" rel="external">别的程序员是怎么读你的简历的</a> ），恰好最近几天我面试了两位来我们公司应聘的程序员，那么我就综合一下我作为刚实习不久的应届毕业生和“面试官”两个身份来谈谈我对程序员面试和如何面试程序员的一些看法</p>
 </blockquote>
@@ -35,6 +35,12 @@
 <li>首先需要问一些基础的技术细节</li>
 <li>问一些常见的算法问题（比如很经典的<a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank" rel="external">反转二叉树</a>）</li>
 <li>框架的技术实现细节／设计模式／架构设计</li>
+<li>综合素质考察<ul>
+<li>最喜欢读的书籍/技术书籍</li>
+<li>对开源软件的看法</li>
+<li>对当下很火的新技术的看法</li>
+</ul>
+</li>
 </ol>
 <h3 id="面试也不能一概而论，针对不同类型的求职者自然要设置不同的侧重点：">面试也不能一概而论，针对不同类型的求职者自然要设置不同的侧重点：</h3><ul>
 <li>应届毕业学生：<ul>
@@ -47,7 +53,7 @@
 <li>有过几年工作经验：<ul>
 <li>工作方式</li>
 <li>解决问题的态度</li>
-<li>对新技术的看法及了解</li>
+<li>对新技术的了解及看法</li>
 <li>架构设计、设计模式</li>
 </ul>
 </li>
