@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2015-11-29T16:35:07.000Z</updated>
+  <updated>2015-11-29T16:47:28.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lionrock.github.io/2015/11/27/how-to-interview/"/>
     <id>http://lionrock.github.io/2015/11/27/how-to-interview/</id>
     <published>2015-11-27T15:10:17.000Z</published>
-    <updated>2015-11-29T16:35:07.000Z</updated>
+    <updated>2015-11-29T16:47:28.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>之前看到过一篇介绍HR和程序员在面试程序员时的区别的文章（ <a href="http://coolshell.cn/articles/1695.html" target="_blank" rel="external">别的程序员是怎么读你的简历的</a> ），恰好最近几天我面试了两位来我们公司应聘的程序员，那么我就综合一下我作为刚实习不久的应届毕业生和“面试官”两个身份来谈谈我对程序员面试和如何面试程序员的一些看法</p>
 </blockquote>
@@ -65,7 +65,9 @@
 <p>之前看到过一篇介绍HR和程序员在面试程序员时的区别的文章（ <a href="http://coolshell.cn/articles/1695.html" target="_blank" rel="external">别的程序员是怎么读你的简历的]]>
     </summary>
     
-      <category term="随想, 面试" scheme="http://lionrock.github.io/tags/%E9%9A%8F%E6%83%B3-%E9%9D%A2%E8%AF%95/"/>
+      <category term="随想" scheme="http://lionrock.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="面试" scheme="http://lionrock.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -74,7 +76,7 @@
     <link href="http://lionrock.github.io/2015/11/26/blog-space-moved/"/>
     <id>http://lionrock.github.io/2015/11/26/blog-space-moved/</id>
     <published>2015-11-26T15:54:34.000Z</published>
-    <updated>2015-11-29T16:35:21.000Z</updated>
+    <updated>2015-11-29T16:47:21.000Z</updated>
     <content type="html"><![CDATA[<p>今年国庆节的时候就计划着准备自己重新写一套博客，但是一直拖到今天才开始真正去做，哎～不说了，好歹今天总算是搬进新家了OhYeah(＞人＜;)</p>
 <h2 id="谈谈之前的博客系统">谈谈之前的博客系统</h2><p>由于我大二开始主力语言转移到了python，当时就拿博客拿来当练手的项目，前前后后花了三个晚上的时间总算是把博客的系统搭起来了，麻烦虽然是麻烦了点，不过看着自己写的博客呈现在各种设备的屏幕上时成就感还是满满的对吧</p>
 <p>当时的技术栈用的是：</p>
@@ -93,7 +95,9 @@
 <h2 id="谈谈之前的博客系统">谈谈之前的博客系统</h2><p>由于我大二开始主力语言转移到了python，当时就拿]]>
     </summary>
     
-      <category term="随想, 博客" scheme="http://lionrock.github.io/tags/%E9%9A%8F%E6%83%B3-%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://lionrock.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="随想" scheme="http://lionrock.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
