@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2015-11-29T16:47:28.000Z</updated>
+  <updated>2015-11-30T06:22:46.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[最显而易见的设计最容易成功——简约设计也得有个度]]></title>
+    <link href="http://lionrock.github.io/2015/11/30/obvious-design/"/>
+    <id>http://lionrock.github.io/2015/11/30/obvious-design/</id>
+    <published>2015-11-30T05:50:12.000Z</published>
+    <updated>2015-11-30T06:22:46.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>今天看到一篇介绍用户界面设计方面相关的文章，恰好最近在公司开发时一直在考虑UI界面设计方面的问题。于是，本着学习和共享的精神，决定将文章翻译成中文，翻译过程中可能会加上一些自己的理解，觉得哪有问题的以原文为准，不足之处也请见谅。原文链接：<a href="http://www.lukew.com/ff/entry.asp?1945" target="_blank" rel="external">http://www.lukew.com/ff/entry.asp?1945</a></p>
+</blockquote>
+<p>设计师们总是在尝试通过菜单键来简化移动应用的洁面——尤其是在小屏幕上。但是把一款应用最重要的那一部分操作也移到这些菜单键的后面只会对应用的体验带来消极的影响。</p>
+<h1 id="视野之外，想法之外">视野之外，想法之外</h1><p>在努力简化<a href="http://www.polarb.com/features/about" target="_blank" rel="external">Polar</a>App的用户界面的过程中，我们将分块式控制菜单(segmented control menu)替换成了折叠式菜单（toggle menu）。尽管这个折叠起来的下拉菜单看起来简洁了不少，</p>
+<h1 id="视野之内，想法之内">视野之内，想法之内</h1>]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>今天看到一篇介绍用户界面设计方面相关的文章，恰好最近在公司开发时一直在考虑UI界面设计方面的问题。于是，本着学习和共享的精神，决定将文章翻译成中文，翻译过程中可能会加上一些自己的理解，觉得哪有问题的以原文为准，不足之处也请见谅。原文链接：<a hr]]>
+    </summary>
+    
+      <category term="产品" scheme="http://lionrock.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="设计" scheme="http://lionrock.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[谈谈程序员面试那点事]]></title>
