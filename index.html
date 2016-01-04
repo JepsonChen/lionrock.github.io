@@ -6,7 +6,7 @@
   <title>黎浔的个人博客</title>
   
   
-      <meta name="keywords" content="黎浔,博客,个人博客,技术博客,移动互联网,前端" />
+      <meta name="keywords" content="黎浔,博客,个人博客,技术博客,移动互联网,前端,Leo,Leo's Blog" />
   
 
   <meta name="google-site-verification" content="NY0Rc-yGHSUp72PJf0xpi8QUltS3Oarm_5ZcQ3Hek1g" />
@@ -114,7 +114,7 @@
 					        
 								<a class="github" target="_blank" href="https://github.com/lionrock" title="github">github</a>
 					        
-								<a class="mail" target="_blank" href="/xunli007@icloud.com" title="mail">mail</a>
+								<a class="mail" target="_blank" href="/xunli007@iCloud.com" title="mail">mail</a>
 					        
 						</div>
 					</nav>
@@ -133,10 +133,6 @@
 					<div id="js-friends">
 					
 			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://macshuo.com/">Mactalk</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://onevcat.com/">OneV&#39;s Den</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://coolshell.cn/">酷壳</a>
 			        
 			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ruanyifeng.com/">阮一峰的网络日志</a>
 			        
@@ -192,7 +188,7 @@
 			        
 						<a class="github" target="_blank" href="https://github.com/lionrock" title="github">github</a>
 			        
-						<a class="mail" target="_blank" href="/xunli007@icloud.com" title="mail">mail</a>
+						<a class="mail" target="_blank" href="/xunli007@iCloud.com" title="mail">mail</a>
 			        
 				</div>
 			</nav>
@@ -317,7 +313,18 @@
 <li>Mac下c语言编译器用的是clang、C++编译器用clang++，调试器用的lldb，以上三个装完Xcode的command line tools后就安装完成，分别用来替代gcc、g++、gdb</li>
 </ul>
 </li>
-<li><a href="http://brew.sh" target="_blank" rel="external">Home Brew</a>：Mac下最好用的包管理工具</li>
+<li><p><a href="http://ohmyz.sh/" target="_blank" rel="external">Oh-My-Zsh</a>：使用 <code>zsh：chsh -s /bin/zsh</code>，将默认的shell切换成zsh（zsh是OS X自带的不需要另行安装），接着安装Oh-My-Zsh:</p>
+<ul>
+<li><p>自动安装：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//github.<span class="keyword">com</span>/robbyrussell/oh-my-zsh/raw/master/tools/install.<span class="keyword">sh</span> -O - | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>手动安装：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="symbol">git:</span>/<span class="regexp">/github.com/robbyrussell</span><span class="regexp">/oh-my-zsh.git ~/</span>.oh-my-zsh</span><br><span class="line">cp ~<span class="regexp">/.oh-my-zsh/templates</span><span class="regexp">/zshrc.zsh-template ~/</span>.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><a href="http://brew.sh" target="_blank" rel="external">Home Brew</a>：Mac下最好用的包管理工具</p>
+</li>
 <li>brew-cask：用来装GUI程序的包管理工具，直接用brew安装</li>
 <li>LaunchRocket： 图形化的Service管理工具，可以直接用brew-cask命令安装 <code>brew tap jimbojsb/launchrocket</code><br><code>brew cask install launchrocket</code></li>
 </ul>
@@ -617,7 +624,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false
+		open_in_new: true
 	}
 </script>
 <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>

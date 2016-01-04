@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2016-01-01T16:08:10.000Z</updated>
+  <updated>2016-01-04T02:15:55.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lionrock.github.io/2015/12/31/beginning-mac-osx/"/>
     <id>http://lionrock.github.io/2015/12/31/beginning-mac-osx/</id>
     <published>2015-12-31T06:02:50.000Z</published>
-    <updated>2016-01-01T16:08:10.000Z</updated>
+    <updated>2016-01-04T02:15:55.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>即将跨入2016年，这也将是我大学里最后一个新年，仔细回想这一年里对我个人来说做出的改变确实不少。断断续续重装了不知道不知道多少次Windows，Linux发行版换来换去总是觉得不那么满意，终于在今年三月份买了人生中第一台Mac。暑假之后开始了人生里第一次真正意义上的实习、第一款App Store上架应用、全面转向了JavaScript全栈开发，感谢<a href="http://weibo.com/u/2164287365" target="_blank" rel="external">@钱久病</a>一直以来对我的支持与鼓励</p>
 </blockquote>
@@ -110,7 +110,18 @@
 <li>Mac下c语言编译器用的是clang、C++编译器用clang++，调试器用的lldb，以上三个装完Xcode的command line tools后就安装完成，分别用来替代gcc、g++、gdb</li>
 </ul>
 </li>
-<li><a href="http://brew.sh" target="_blank" rel="external">Home Brew</a>：Mac下最好用的包管理工具</li>
+<li><p><a href="http://ohmyz.sh/" target="_blank" rel="external">Oh-My-Zsh</a>：使用 <code>zsh：chsh -s /bin/zsh</code>，将默认的shell切换成zsh（zsh是OS X自带的不需要另行安装），接着安装Oh-My-Zsh:</p>
+<ul>
+<li><p>自动安装：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//github.<span class="keyword">com</span>/robbyrussell/oh-my-zsh/raw/master/tools/install.<span class="keyword">sh</span> -O - | <span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>手动安装：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="symbol">git:</span>/<span class="regexp">/github.com/robbyrussell</span><span class="regexp">/oh-my-zsh.git ~/</span>.oh-my-zsh</span><br><span class="line">cp ~<span class="regexp">/.oh-my-zsh/templates</span><span class="regexp">/zshrc.zsh-template ~/</span>.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><a href="http://brew.sh" target="_blank" rel="external">Home Brew</a>：Mac下最好用的包管理工具</p>
+</li>
 <li>brew-cask：用来装GUI程序的包管理工具，直接用brew安装</li>
 <li>LaunchRocket： 图形化的Service管理工具，可以直接用brew-cask命令安装 <code>brew tap jimbojsb/launchrocket</code><br><code>brew cask install launchrocket</code></li>
 </ul>
