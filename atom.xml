@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2016-01-04T02:20:19.000Z</updated>
+  <updated>2016-01-04T02:27:39.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lionrock.github.io/2015/12/31/beginning-mac-osx/"/>
     <id>http://lionrock.github.io/2015/12/31/beginning-mac-osx/</id>
     <published>2015-12-31T06:02:50.000Z</published>
-    <updated>2016-01-04T02:20:19.000Z</updated>
+    <updated>2016-01-04T02:27:39.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>即将跨入2016年，这也将是我大学里最后一个新年，仔细回想这一年里对我个人来说做出的改变确实不少。断断续续重装了不知道不知道多少次Windows，Linux发行版换来换去总是觉得不那么满意，终于在今年三月份买了人生中第一台Mac。暑假之后开始了人生里第一次真正意义上的实习、第一款App Store上架应用、全面转向了JavaScript全栈开发，感谢<a href="http://weibo.com/u/2164287365" target="_blank" rel="external">@钱久病</a>一直以来对我的支持与鼓励</p>
 </blockquote>
@@ -126,10 +126,10 @@
 <li>LaunchRocket： 图形化的Service管理工具，可以直接用brew-cask命令安装 <code>brew tap jimbojsb/launchrocket</code><br><code>brew cask install launchrocket</code></li>
 </ul>
 <h3 id="其它常用软件">其它常用软件</h3><ul>
-<li>解压缩：the Unarchiver</li>
-<li>视频播放器：MPlayer X, VLC, mpv</li>
+<li>解压缩：the Unarchiver（App Store直接安装）</li>
+<li>视频播放器：MPlayer X, VLC, <a href="https://mpv.io/" target="_blank" rel="external">mpv</a></li>
 <li>MarkDown编辑器：Mou</li>
-<li>终端：iTerm2</li>
+<li>终端：iTerm2(终端快速分屏的时代来临)</li>
 <li>Android手机数据传输：Android File Transfer</li>
 </ul>
 <h2 id="拓展阅读">拓展阅读</h2><p><a href="http://macshuo.com/?p=728" target="_blank" rel="external">Macintosh演化史</a></p>
