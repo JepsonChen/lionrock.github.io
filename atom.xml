@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2016-01-07T16:28:13.000Z</updated>
+  <updated>2016-01-04T02:31:12.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -13,30 +13,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[HTML5摇一摇之DeviceOrientation事件]]></title>
-    <link href="http://lionrock.github.io/2016/01/06/html5-device-orientation/"/>
-    <id>http://lionrock.github.io/2016/01/06/html5-device-orientation/</id>
-    <published>2016-01-06T05:00:30.000Z</published>
-    <updated>2016-01-07T16:28:13.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>刚刚过去的一年里基于微信的H5营销可谓是十分火爆，通过转发朋友圈带来的病毒式传播效果相信大家都不太陌生吧，刚好最近农历新年将至，我就拿一个“摇签”的小例子来谈一谈HTML5中如何调用手机重力感应的接口</p>
-</blockquote>
-<h2 id="什么是重力感应">什么是重力感应</h2><p>说到重力感应有一个东西不得不提，那就是就是陀螺仪，这可不是小时候玩的陀螺</p>
-<h2 id="手机中的方位轴">手机中的方位轴</h2><h2 id="在Web应用中调用手机陀螺仪接口">在Web应用中调用手机陀螺仪接口</h2><h2 id="摇一摇的代码判断逻辑">摇一摇的代码判断逻辑</h2>]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>刚刚过去的一年里基于微信的H5营销可谓是十分火爆，通过转发朋友圈带来的病毒式传播效果相信大家都不太陌生吧，刚好最近农历新年将至，我就拿一个“摇签”的小例子来谈一谈HTML5中如何调用手机重力感应的接口</p>
-</blockquote>
-<h2 i]]>
-    </summary>
-    
-      <category term="HTML5" scheme="http://lionrock.github.io/tags/HTML5/"/>
-    
-      <category term="微信" scheme="http://lionrock.github.io/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[把时间浪费在美好的事物上 - 写给程序员的Mac OS X入门指南]]></title>
