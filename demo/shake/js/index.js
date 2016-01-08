@@ -7,7 +7,7 @@ function start() {
     $('.qiancover').hide();
     $('.decode').hide();
     $('.result').show();
-    // setTimeout(showDecode, 3000);
+    setTimeout(showDecode, 3000);
 }
 
 // 显示正在解签
