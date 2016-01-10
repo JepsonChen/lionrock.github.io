@@ -123,7 +123,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/设计/" style="font-size: 10px;">设计</a> <a href="/tags/随想/" style="font-size: 20px;">随想</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/设计/" style="font-size: 10px;">设计</a> <a href="/tags/随想/" style="font-size: 20px;">随想</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
 					</div>
 				</section>
 				
@@ -196,6 +196,103 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-github-not-count" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/09/github-not-count/" class="article-date">
+  	<time datetime="2016-01-09T15:54:29.000Z" itemprop="datePublished">2016-01-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/09/github-not-count/">Github为什么没有记录你的的Contributions</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近在给同学看我的github时，突然发现我的Contribution Graph上一篇空白居然只有两三个小绿块，因为自己平时在公司工作的记录会显示在自己的Contribution Graph上，所以一直没发现个人repo的commit记录都没有被记录，于是外事不决问Google，发现原来是因为git初始化设定时没有设定正确的用户名和邮箱（主要是邮箱），具体可以参考Github官方写的help文档</p>
+</blockquote>
+<h2 id="为什么你的_Contributions_没有在你的_Profile_里显示？">为什么你的 Contributions 没有在你的 Profile 里显示？</h2><p>那么问题来了，什么是Contribution呢，Github官网上有这么一句话：</p>
+<blockquote>
+<p>Your profile contributions graph is a record of contributions you’ve made to GitHub repositories. Contributions are only counted if they meet certain criteria. In some cases, we may need to rebuild your graph in order for contributions to appear.</p>
+</blockquote>
+<h2 id="如何排查">如何排查</h2><p>你可以在你的本地repo里用<code>git log</code>命令查看commit记录上的个人邮箱是否正确，像我就是因为之前切换到Mac平台开发之后用户名没有配置，所以我之后的commit记录上的邮箱一直是<code>Leo@Leo-MacBook-Pro.local</code>，所以Github就会认为这些commit都不是你提交的！</p>
+<h2 id="补救措施">补救措施</h2><p>然而这也并不是没有补救办法的，Github官网上就有给出详细的补救过程，英语好的同学请自行移步 <a href="https://help.github.com/articles/changing-author-info/" target="_blank" rel="external">Changing author info</a></p>
+<p>下面是我翻译自Github Help的简要步骤：</p>
+<blockquote>
+<p><strong>改变作者信息</strong></p>
+<p>为改变已经存在的 commit 的用户名和/或邮箱地址，你必须重写你 Git repo 的整个历史。</p>
+<blockquote>
+<p><strong>警告：</strong> 这种行为对你的 repo 的历史具有破坏性。如果你的 repo 是与他人协同工作的，重写已发布的历史是一种不好的习惯。仅限紧急情况执行该操作。<br>使用脚本改变你 repo 的 Git 历史<br>我们写了一段能把 commit 作者旧的邮箱地址修改为正确用户名和邮箱的脚本。</p>
+</blockquote>
+<p><strong>使用脚本来改变某个repo的Git历史</strong></p>
+<p>我们已经创建了一个脚本，使用正确的姓名和电子邮件地址提交后，你以前提交的所有的commits中的作者信息及提交者字段中的旧的用户名和邮箱地址都将被更正</p>
+<blockquote>
+<p><strong>注意：</strong> 执行这段脚本会重写 repo 所有协作者的历史。完成以下操作后，任何 fork 或 clone 的人必须获取重写后的历史并把所有本地修改 rebase 入重写后的历史中。<br>在执行这段脚本前，你需要准备的信息：</p>
+</blockquote>
+<ol>
+<li><p>Mac、Linux下打开Terminal，Windows下打开命令提示符（command prompt）</p>
+</li>
+<li><p>给你的repo创建一个全新的clone</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">--bare</span> https://github.com/user/repo.git</span><br><span class="line">cd repo.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制粘贴脚本，并根据你的信息修改以下变量：<br><code>旧的Email地址</code>，<br><code>正确的用户名</code>，<br><code>正确的邮件地址</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh&#10;git filter-branch --env-filter &#39;&#10;OLD_EMAIL=&#34;&#26087;&#30340;Email&#22320;&#22336;&#34;&#10;CORRECT_NAME=&#34;&#27491;&#30830;&#30340;&#29992;&#25143;&#21517;&#34;&#10;CORRECT_EMAIL=&#34;&#27491;&#30830;&#30340;&#37038;&#20214;&#22320;&#22336;&#34;&#10;if [ &#34;$GIT_COMMITTER_EMAIL&#34; = &#34;$OLD_EMAIL&#34; ]&#10;then&#10;    export GIT_COMMITTER_NAME=&#34;$CORRECT_NAME&#34;&#10;    export GIT_COMMITTER_EMAIL=&#34;$CORRECT_EMAIL&#34;&#10;fi&#10;if [ &#34;$GIT_AUTHOR_EMAIL&#34; = &#34;$OLD_EMAIL&#34; ]&#10;then&#10;    export GIT_AUTHOR_NAME=&#34;$CORRECT_NAME&#34;&#10;    export GIT_AUTHOR_EMAIL=&#34;$CORRECT_EMAIL&#34;&#10;fi&#10;&#39; --tag-name-filter cat -- --branches --tags</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按 <code>Enter键</code> 执行脚本。</p>
+</li>
+<li><p>用<code>git log</code>命令看看新 Git 历史有没有错误</p>
+</li>
+<li><p>把正确历史 push 到 Github</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --force --tags origin &#39;refs/heads/*&#39;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删掉杠杠临时创建的 clone</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ..&#10;rm -rf repo.git</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<h3 id="如何正确设置你的_git_个人信息">如何正确设置你的 git 个人信息</h3><p>接下来全局设置好你的正确信息，以后就放心的用Github进行版本管理吧 <code>^_^</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &#34;&#20320;&#30340;&#37038;&#20214;&#22320;&#22336;&#34;&#10;git config --global user.name &#34;&#20320;&#30340;Github&#29992;&#25143;&#21517;&#34;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-beginning-mac-osx" class="article article-type-post" itemscope itemprop="blogPost">
   
