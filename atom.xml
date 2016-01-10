@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2016-01-10T09:49:02.000Z</updated>
+  <updated>2016-01-10T09:53:02.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://lionrock.github.io/2016/01/09/github-not-count/"/>
     <id>http://lionrock.github.io/2016/01/09/github-not-count/</id>
     <published>2016-01-09T15:54:29.000Z</published>
-    <updated>2016-01-10T09:49:02.000Z</updated>
+    <updated>2016-01-10T09:53:02.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>最近在给同学看我的github时，突然发现我的Contribution Graph上一篇空白居然只有两三个小绿块，因为自己平时在公司工作的记录会显示在自己的Contribution Graph上，所以一直没发现个人repo的commit记录都没有被记录，于是外事不决问Google，发现原来是因为git初始化设定时没有设定正确的用户名和邮箱（主要是邮箱），具体可以参考Github官方写的help文档</p>
 </blockquote>
@@ -63,6 +63,10 @@
 </ol>
 </blockquote>
 <h3 id="如何正确设置你的_git_个人信息">如何正确设置你的 git 个人信息</h3><p>接下来全局设置好你的正确信息，以后就放心的用Github进行版本管理吧 <code>^_^</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &#34;&#20320;&#30340;&#37038;&#20214;&#22320;&#22336;&#34;&#10;git config --global user.name &#34;&#20320;&#30340;Github&#29992;&#25143;&#21517;&#34;</span><br></pre></td></tr></table></figure></p>
+<p>参考：</p>
+<ol>
+<li><a href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile/" target="_blank" rel="external">Why are my contributions not showing up on my profile?</a></li>
+</ol>
 ]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
