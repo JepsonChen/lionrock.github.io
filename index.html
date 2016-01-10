@@ -214,7 +214,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/09/github-not-count/">Github为什么没有记录你的的Contributions</a>
+      <a class="article-title" href="/2016/01/09/github-not-count/">Github为什么没有记录你的Contributions</a>
     </h1>
   
 
@@ -226,21 +226,50 @@
         <blockquote>
 <p>最近在给同学看我的github时，突然发现我的Contribution Graph上一篇空白居然只有两三个小绿块，因为自己平时在公司工作的记录会显示在自己的Contribution Graph上，所以一直没发现个人repo的commit记录都没有被记录，于是外事不决问Google，发现原来是因为git初始化设定时没有设定正确的用户名和邮箱（主要是邮箱），具体可以参考Github官方写的help文档</p>
 </blockquote>
-<h2 id="为什么你的_Contributions_没有在你的_Profile_里显示？">为什么你的 Contributions 没有在你的 Profile 里显示？</h2><p>那么问题来了，什么是Contribution呢，Github官网上有这么一句话：</p>
+<h2 id="为什么你的_Contributions_没有在你的_Profile_里显示？">为什么你的 Contributions 没有在你的 Profile 里显示？</h2><p>那么问题来了，什么是Contributions呢，Github官网上有这么一句话：</p>
 <blockquote>
 <p>Your profile contributions graph is a record of contributions you’ve made to GitHub repositories. Contributions are only counted if they meet certain criteria. In some cases, we may need to rebuild your graph in order for contributions to appear.</p>
+<p>你的个人简介中的贡献图记录的是你给Github上的仓库的贡献。它仅仅只记录某些符合标准的commits。在某些情况下，我们需要重新建立你的贡献图以便让所有的贡献都显示出来。</p>
 </blockquote>
-<h2 id="如何排查">如何排查</h2><p>你可以在你的本地repo里用<code>git log</code>命令查看commit记录上的个人邮箱是否正确，像我就是因为之前切换到Mac平台开发之后用户名没有配置，所以我之后的commit记录上的邮箱一直是<code>Leo@Leo-MacBook-Pro.local</code>，所以Github就会认为这些commit都不是你提交的！</p>
-<h2 id="补救措施">补救措施</h2><p>然而这也并不是没有补救办法的，Github官网上就有给出详细的补救过程，英语好的同学请自行移步 <a href="https://help.github.com/articles/changing-author-info/" target="_blank" rel="external">Changing author info</a></p>
-<p>下面是我翻译自Github Help的简要步骤：</p>
+<h2 id="什么样的贡献才会被Github统计?">什么样的贡献才会被Github统计?</h2><p>英语好的同学请移步 <a href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile/" target="_blank" rel="external">Why are my contributions not showing up on my profile?</a></p>
+<h3 id="Issues_和_pull_requests">Issues 和 pull requests</h3><ul>
+<li>这个操作是在一年之内</li>
+<li>这个操作是针对一个独立的仓库，不能是fork</li>
+</ul>
+<h3 id="Commits">Commits</h3><p>当你的commits满足以下条件时，它才会被展示出来：</p>
+<ul>
+<li>一年之内提交的commits</li>
+<li>commits使用的email地址是与你的Github账号相关联的</li>
+<li>这些commits是在一个独立的仓库而不是fork仓库</li>
+<li>这些commits是在：<ul>
+<li>在默认分支上（通常是<code>master</code>）</li>
+<li>在<code>gh-pages</code>分支(包含 <a href="https://help.github.com/articles/user-organization-and-project-pages/#project-pages" target="_blank" rel="external">Project Pages sites</a> 的仓库)</li>
+</ul>
+</li>
+</ul>
+<p>此外，至少满足下面条件中的一个（主要针对你Commit的仓库不是你创建的）：</p>
+<ul>
+<li>你是这个仓库的协作者，或者是这个版本库的拥有组织中的一员</li>
+<li>你fork过这个仓库</li>
+<li>你对这个仓库发起过pull request或者issue</li>
+<li>你对这个仓库标记了Star</li>
+</ul>
 <blockquote>
-<p><strong>改变作者信息</strong></p>
-<p>为改变已经存在的 commit 的用户名和/或邮箱地址，你必须重写你 Git repo 的整个历史。</p>
+<p><strong>注意：</strong>私有库的贡献仅仅对私有库成员显示</p>
+</blockquote>
+<p>###Contributions未被Github计入的几个常见原因</p>
+<ul>
+<li>进行Commits的用户没有被关联到你的Github帐号中。</li>
+<li>不是在这个版本库的默认分支进行的Commit。</li>
+<li>这个仓库是一个Fork仓库，而不是独立仓库。</li>
+</ul>
+<h2 id="如何排查">如何排查</h2><p>你可以在你的本地repo里用<code>git log</code>命令查看commit记录上的个人邮箱是否正确，像我就是因为之前切换到Mac平台开发之后用户名没有配置，所以我之后的commit记录上的邮箱一直是<code>Leo@Leo-MacBook-Pro.local</code>，所以Github就会认为这些commits都不是你提交的！</p>
+<h2 id="补救措施">补救措施</h2><p>然而这也并不是没有补救办法的，Github官网上就有给出详细的补救过程，英语好的同学请自行移步 <a href="https://help.github.com/articles/changing-author-info/" target="_blank" rel="external">Changing author info</a>，下面是我翻译自Github Help的简要步骤：</p>
+<h3 id="变更作者信息">变更作者信息</h3><p>为改变已经存在的 commits 的用户名和/或邮箱地址，你必须重写你 Git repo 的整个历史。</p>
 <blockquote>
 <p><strong>警告：</strong> 这种行为对你的 repo 的历史具有破坏性。如果你的 repo 是与他人协同工作的，重写已发布的历史是一种不好的习惯。仅限紧急情况执行该操作。<br>使用脚本改变你 repo 的 Git 历史<br>我们写了一段能把 commit 作者旧的邮箱地址修改为正确用户名和邮箱的脚本。</p>
 </blockquote>
-<p><strong>使用脚本来改变某个repo的Git历史</strong></p>
-<p>我们已经创建了一个脚本，使用正确的姓名和电子邮件地址提交后，你以前提交的所有的commits中的作者信息及提交者字段中的旧的用户名和邮箱地址都将被更正</p>
+<h4 id="使用脚本来改变某个repo的Git历史">使用脚本来改变某个repo的Git历史</h4><p>我们已经创建了一个脚本，使用正确的姓名和电子邮件地址提交后，你以前提交的所有的commits中的作者信息及提交者字段中的旧的用户名和邮箱地址都将被更正</p>
 <blockquote>
 <p><strong>注意：</strong> 执行这段脚本会重写 repo 所有协作者的历史。完成以下操作后，任何 fork 或 clone 的人必须获取重写后的历史并把所有本地修改 rebase 入重写后的历史中。<br>在执行这段脚本前，你需要准备的信息：</p>
 </blockquote>
@@ -260,16 +289,11 @@
 <li><p>把正确历史 push 到 Github</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --force --tags origin &#39;refs/heads/*&#39;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>删掉杠杠临时创建的 clone</p>
+<li><p>删掉刚刚临时创建的 clone</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ..&#10;rm -rf repo.git</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-</blockquote>
-<h3 id="如何正确设置你的_git_个人信息">如何正确设置你的 git 个人信息</h3><p>接下来全局设置好你的正确信息，以后就放心的用Github进行版本管理吧 <code>^_^</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &#34;&#20320;&#30340;&#37038;&#20214;&#22320;&#22336;&#34;&#10;git config --global user.name &#34;&#20320;&#30340;Github&#29992;&#25143;&#21517;&#34;</span><br></pre></td></tr></table></figure></p>
-<p>参考：</p>
-<ol>
-<li><a href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile/" target="_blank" rel="external">Why are my contributions not showing up on my profile?</a></li>
-</ol>
+<h2 id="如何正确设置你的_git_个人信息">如何正确设置你的 git 个人信息</h2><p>接下来全局设置好你的正确信息，以后就放心的用Github进行版本管理吧 <code>^_^</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &#34;&#20320;&#30340;&#37038;&#20214;&#22320;&#22336;&#34;&#10;git config --global user.name &#34;&#20320;&#30340;Github&#29992;&#25143;&#21517;&#34;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
