@@ -107,7 +107,7 @@
     <link href="http://lionrock.github.io/2015/12/31/beginning-mac-osx/"/>
     <id>http://lionrock.github.io/2015/12/31/beginning-mac-osx/</id>
     <published>2015-12-31T06:02:50.000Z</published>
-    <updated>2016-01-04T02:31:12.000Z</updated>
+    <updated>2016-01-11T13:46:04.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>即将跨入2016年，这也将是我大学里最后一个新年，仔细回想这一年里对我个人来说做出的改变确实不少。断断续续重装了不知道不知道多少次Windows，Linux发行版换来换去总是觉得不那么满意，终于在今年三月份买了人生中第一台Mac。暑假之后开始了人生里第一次真正意义上的实习、第一款App Store上架应用、全面转向了JavaScript全栈开发，感谢<a href="http://weibo.com/u/2164287365" target="_blank" rel="external">@钱久病</a>一直以来对我的支持与鼓励</p>
 </blockquote>
@@ -126,7 +126,7 @@
 <li>杰出的工业设计</li>
 </ul>
 <h3 id="社区层面">社区层面</h3><ul>
-<li>如果你是Swift／Object-C程序员，Mac应该是标配好吧</li>
+<li>如果你是Swift／Objective-C程序员，Mac应该是标配好吧</li>
 <li>如果你是Ruby on Rails程序员，包括DHH在内的绝大多数ror开发者首推的开发环境就是Mac</li>
 <li>对于Web前端开发者来说，Mac的Retina屏的杀伤力想必不小吧</li>
 <li>对于广大Python、PHP程序员来说, Mac可是自带apache、php、python</li>
