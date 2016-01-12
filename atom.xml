@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2016-01-12T06:09:38.000Z</updated>
+  <updated>2016-01-12T06:13:06.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -19,10 +19,11 @@
     <link href="http://lionrock.github.io/2016/01/12/html5-device-shake/"/>
     <id>http://lionrock.github.io/2016/01/12/html5-device-shake/</id>
     <published>2016-01-12T06:00:12.000Z</published>
-    <updated>2016-01-12T06:09:38.000Z</updated>
+    <updated>2016-01-12T06:13:06.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>刚刚过去的一年里基于微信的H5营销可谓是十分火爆，通过转发朋友圈带来的病毒式传播效果相信大家都不太陌生吧，刚好最近农历新年将至，我就拿一个“摇签”的小例子来谈一谈HTML5中如何调用手机重力感应的接口</p>
 </blockquote>
+<p>演示代码：<a href="http://xunli.xyz/demo/shake" target="_blank" rel="external">摇一摇，万福签</a></p>
 <h2 id="什么是重力感应">什么是重力感应</h2><p>说到重力感应有一个东西不得不提，那就是就是陀螺仪，陀螺仪就是内部有一个陀螺，陀螺仪一旦开始旋转，由于轮子的角动量，陀螺仪有抗拒方向改变的特性，它的轴由于陀螺效应始终与初始方向平行，这样就可以通过与初始方向的偏差计算出实际方向。</p>
 <h2 id="手机中的方位轴">手机中的方位轴</h2><p><img src="http://7xort8.com1.z0.glb.clouddn.com/w3c-deviceorientation.png" alt="w3c-deviceorientation"></p>
 <p><img src="http://7xort8.com1.z0.glb.clouddn.com/c-rotation.png" alt="alpha"><br><img src="http://7xort8.com1.z0.glb.clouddn.com/a-rotation.png" alt="beta"><br><img src="http://7xort8.com1.z0.glb.clouddn.com/b-rotation.png" alt="gamma"></p>
@@ -36,7 +37,7 @@
     <![CDATA[<blockquote>
 <p>刚刚过去的一年里基于微信的H5营销可谓是十分火爆，通过转发朋友圈带来的病毒式传播效果相信大家都不太陌生吧，刚好最近农历新年将至，我就拿一个“摇签”的小例子来谈一谈HTML5中如何调用手机重力感应的接口</p>
 </blockquote>
-<h2 i]]>
+<p>演示]]>
     </summary>
     
       <category term="HTML5" scheme="http://lionrock.github.io/tags/HTML5/"/>
