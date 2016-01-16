@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Stay hungry, Stay foolish]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://lionrock.github.io/"/>
-  <updated>2016-01-13T08:11:42.000Z</updated>
+  <updated>2016-01-16T11:02:25.000Z</updated>
   <id>http://lionrock.github.io/</id>
   
   <author>
@@ -13,6 +13,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[为什么是React]]></title>
+    <link href="http://lionrock.github.io/2016/01/16/react-vs-jquery/"/>
+    <id>http://lionrock.github.io/2016/01/16/react-vs-jquery/</id>
+    <published>2016-01-16T10:50:35.000Z</published>
+    <updated>2016-01-16T11:02:25.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>为什么越来越多的互联网公司都在转向React.js去开发前端组建，除了性能因素外，很大一部分原因是因为用jQuery去写很复杂的DOM操作，后期代码会变得越来越难维护。现在大部分的 Web APP 都有一个特点：后端的Model层很简单，但是随着产品业务的拓展前端View却变得越来越复杂，这个时候如果还在用纯jQuery去写DOM操作将会变得很不直观，代码也会变的很臃肿进而变的越来越难以维护，下面就拿一个微博发送框的简单例子来展示一些React的简洁与强大。</p>
+</blockquote>
+<p>先来看看React版本：<br><a class="jsbin-embed" href="http://jsbin.com/besayij/embed?js,output" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.9"></script></p>
+<p>jQuery代码<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&#34;textarea&#34;).on(&#34;input&#34;, function() &#123;&#10;  if ($(&#34;.js-add-photo-button&#34;).hasClass(&#34;is-on&#34;)) &#123;&#10;    $(&#34;span&#34;).text(140 - 23 - $(this).val().length);&#10;  &#125; else &#123;&#10;    $(&#34;span&#34;).text(140 - $(this).val().length);&#10;  &#125;&#10;&#10;  if ($(this).val().length &#62; 0 || $(&#34;.js-add-photo-button&#34;).hasClass(&#34;is-on&#34;)) &#123;&#10;    $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, false);&#10;  &#125; else &#123;&#10;    $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, true);&#10;  &#125;&#10;&#125;);&#10;&#10;$(&#34;.js-add-photo-button&#34;).on(&#34;click&#34;, function() &#123;&#10;  if ($(this).hasClass(&#34;is-on&#34;)) &#123;&#10;    $(this)&#10;      .removeClass(&#34;is-on&#34;)&#10;      .text(&#34;Add Photo&#34;);&#10;    $(&#34;span&#34;).text(140 - $(&#34;textarea&#34;).val().length);&#10;    if ($(&#34;textarea&#34;).val().length === 0) &#123;&#10;      $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, true);&#10;    &#125;&#10;  &#125; else &#123;&#10;    $(this)&#10;      .addClass(&#34;is-on&#34;)&#10;      .text(&#34;&#10003; Photo Added&#34;);&#10;    $(&#34;span&#34;).text(140 - 23 - $(&#34;textarea&#34;).val().length);&#10;    $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, false);&#10;  &#125;&#10;&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>参考资料：<br><a href="http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/?utm_source=javascriptweekly&amp;utm_medium=email" target="_blank" rel="external">React.js Introduction For People Who Know Just Enough jQuery To Get By</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>为什么越来越多的互联网公司都在转向React.js去开发前端组建，除了性能因素外，很大一部分原因是因为用jQuery去写很复杂的DOM操作，后期代码会变得越来越难维护。现在大部分的 Web APP 都有一个特点：后端的Model层很简单，但是随着产]]>
+    </summary>
+    
+      <category term="React" scheme="http://lionrock.github.io/tags/React/"/>
+    
+      <category term="jQuery" scheme="http://lionrock.github.io/tags/jQuery/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[html5摇一摇]]></title>

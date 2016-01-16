@@ -123,7 +123,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/摇一摇/" style="font-size: 10px;">摇一摇</a> <a href="/tags/设计/" style="font-size: 10px;">设计</a> <a href="/tags/随想/" style="font-size: 20px;">随想</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/摇一摇/" style="font-size: 10px;">摇一摇</a> <a href="/tags/设计/" style="font-size: 10px;">设计</a> <a href="/tags/随想/" style="font-size: 20px;">随想</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
 					</div>
 				</section>
 				
@@ -196,6 +196,66 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-react-vs-jquery" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/16/react-vs-jquery/" class="article-date">
+  	<time datetime="2016-01-16T10:50:35.000Z" itemprop="datePublished">2016-01-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/16/react-vs-jquery/">为什么是React</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>为什么越来越多的互联网公司都在转向React.js去开发前端组建，除了性能因素外，很大一部分原因是因为用jQuery去写很复杂的DOM操作，后期代码会变得越来越难维护。现在大部分的 Web APP 都有一个特点：后端的Model层很简单，但是随着产品业务的拓展前端View却变得越来越复杂，这个时候如果还在用纯jQuery去写DOM操作将会变得很不直观，代码也会变的很臃肿进而变的越来越难以维护，下面就拿一个微博发送框的简单例子来展示一些React的简洁与强大。</p>
+</blockquote>
+<p>先来看看React版本：<br><a class="jsbin-embed" href="http://jsbin.com/besayij/embed?js,output" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.9"></script></p>
+<p>jQuery代码<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&#34;textarea&#34;).on(&#34;input&#34;, function() &#123;&#10;  if ($(&#34;.js-add-photo-button&#34;).hasClass(&#34;is-on&#34;)) &#123;&#10;    $(&#34;span&#34;).text(140 - 23 - $(this).val().length);&#10;  &#125; else &#123;&#10;    $(&#34;span&#34;).text(140 - $(this).val().length);&#10;  &#125;&#10;&#10;  if ($(this).val().length &#62; 0 || $(&#34;.js-add-photo-button&#34;).hasClass(&#34;is-on&#34;)) &#123;&#10;    $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, false);&#10;  &#125; else &#123;&#10;    $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, true);&#10;  &#125;&#10;&#125;);&#10;&#10;$(&#34;.js-add-photo-button&#34;).on(&#34;click&#34;, function() &#123;&#10;  if ($(this).hasClass(&#34;is-on&#34;)) &#123;&#10;    $(this)&#10;      .removeClass(&#34;is-on&#34;)&#10;      .text(&#34;Add Photo&#34;);&#10;    $(&#34;span&#34;).text(140 - $(&#34;textarea&#34;).val().length);&#10;    if ($(&#34;textarea&#34;).val().length === 0) &#123;&#10;      $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, true);&#10;    &#125;&#10;  &#125; else &#123;&#10;    $(this)&#10;      .addClass(&#34;is-on&#34;)&#10;      .text(&#34;&#10003; Photo Added&#34;);&#10;    $(&#34;span&#34;).text(140 - 23 - $(&#34;textarea&#34;).val().length);&#10;    $(&#34;.js-tweet-button&#34;).prop(&#34;disabled&#34;, false);&#10;  &#125;&#10;&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>参考资料：<br><a href="http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/?utm_source=javascriptweekly&amp;utm_medium=email" target="_blank" rel="external">React.js Introduction For People Who Know Just Enough jQuery To Get By</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-html5-device-shake" class="article article-type-post" itemscope itemprop="blogPost">
   
