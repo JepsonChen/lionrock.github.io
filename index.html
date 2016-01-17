@@ -266,6 +266,72 @@
 
 
   
+    <article id="post-html5-device-shake-animation" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/13/html5-device-shake-animation/" class="article-date">
+  	<time datetime="2016-01-13T13:23:04.000Z" itemprop="datePublished">2016-01-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/13/html5-device-shake-animation/">HTML5摇一摇（下）—如何实现签筒摇动动画</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>演示demo：“<a href="http://xunli.xyz/demo/shake" target="_blank" rel="external">摇一摇，万福签</a>”</p>
+<p>上一篇博客(<a href="http://xunli.xyz/2016/01/12/html5-device-shake/" target="_blank" rel="external">HTML5摇一摇—如何判断设备摇动（上）</a>)中讲到了如何利用HTML5中的DeviceOrientationEvent和DeviceMotionEvent来实现手机摇一摇的判断，这次主要来讲如何利用CSS3实现签筒摇动的动画</p>
+<h2 id="半透明遮罩层">半透明遮罩层</h2><blockquote>
+<p>当签筒摇动动画出发时，半透明遮罩层显示出来用来凸显签筒摇动的动画<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 半透明遮罩层 */</span></span><br><span class="line"><span class="class">.cover</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.7</span>) no-repeat top right</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">position</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="CSS3动画关键帧">CSS3动画关键帧</h2><blockquote>
+<p>了解动画原理的人应该都知道，所谓的动画其实就是由若干个关键帧构成，当一连串的关键帧连续播放时就形成了我们所看见的动画</p>
+</blockquote>
+<p>这里我们所用到的素材其实就是6张连续摇动的签筒所拼成的一张大图：<br><a href="http://7xort8.com1.z0.glb.clouddn.com/blog_shake-animation.png" target="_blank" rel="external">签筒摇动素材</a></p>
+<p>实现这个动画有两个思路：</p>
+<ol>
+<li>把动画分成一步，动画开始以结尾端点为起点开始执行，然后在0%，20,40,80,100执行了背景图的切换</li>
+<li>第二种是动画分成5步，然后每一步在100%处的时候调用最后一张背景图<br>这里我们就拿第二种实现方法来举例</li>
+</ol>
+<p>接下来我们利用CSS3中的<code>@keyframes</code>来定义的动画的关键帧，其中<code>－737px －2px</code>表明每一步动画都会往右移737像素并上移－2px<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">keyframes</span> play </span>&#123;</span><br><span class="line">    100% <span class="rules">&#123;</span><br><span class="line">        <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">737px</span> -<span class="number">2px</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*为了兼容性考虑，可能还需要加上浏览器厂商的前缀，</span><br><span class="line">例如下面给只出了webkit内核的浏览器厂商前缀，</span><br><span class="line">其他的还有-moz-animation，-o-animation */</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">-webkit-keyframes</span> play </span>&#123;</span><br><span class="line">    100% <span class="rules">&#123;</span><br><span class="line">        <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">737px</span> -<span class="number">2px</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="调用我们定义的CSS3关键帧">调用我们定义的CSS3关键帧</h2><p>这里我们利用<code>steps()</code>这个函数把动画平分成5等份，每份0.8s（100%处的时候调用最后一张背景图），<code>infinite</code>参数则会让动画无限循环播放<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.sprite</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">145px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">300px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url</span>(<span class="string">'./img/animation.png'</span>) no-repeat -<span class="number">2px</span> -<span class="number">2px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">animation</span>:<span class="value"> play <span class="number">0.8s</span> <span class="function">steps</span>(<span class="number">5</span>) infinite</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">-webkit-animation</span>:<span class="value"> play <span class="number">0.8s</span> <span class="function">steps</span>(<span class="number">5</span>) infinite</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-html5-device-shake" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -283,7 +349,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/12/html5-device-shake/">html5摇一摇</a>
+      <a class="article-title" href="/2016/01/12/html5-device-shake/">HTML5摇一摇（上）—如何判断设备摇动</a>
     </h1>
   
 
@@ -295,7 +361,7 @@
         <blockquote>
 <p>刚刚过去的一年里基于微信的H5营销可谓是十分火爆，通过转发朋友圈带来的病毒式传播效果相信大家都不太陌生吧，刚好最近农历新年将至，我就拿一个“摇签”的小例子来谈一谈HTML5中如何调用手机重力感应的接口</p>
 </blockquote>
-<p>演示代码：<a href="http://xunli.xyz/demo/shake" target="_blank" rel="external">摇一摇，万福签</a></p>
+<p>演示demo：“<a href="http://xunli.xyz/demo/shake" target="_blank" rel="external">摇一摇，万福签</a>”</p>
 <h2 id="什么是重力感应">什么是重力感应</h2><p>说到重力感应有一个东西不得不提，那就是就是陀螺仪，陀螺仪就是内部有一个陀螺，陀螺仪一旦开始旋转，由于轮子的角动量，陀螺仪有抗拒方向改变的特性，它的轴由于陀螺效应始终与初始方向平行，这样就可以通过与初始方向的偏差计算出实际方向。</p>
 <h2 id="手机中的方位轴">手机中的方位轴</h2><p><img src="http://7xort8.com1.z0.glb.clouddn.com/w3c-deviceorientation.png" alt="w3c-deviceorientation"></p>
 <p><img src="http://7xort8.com1.z0.glb.clouddn.com/c-rotation.png" alt="alpha"><br><img src="http://7xort8.com1.z0.glb.clouddn.com/a-rotation.png" alt="beta"><br><img src="http://7xort8.com1.z0.glb.clouddn.com/b-rotation.png" alt="gamma"></p>
